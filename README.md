@@ -1,13 +1,14 @@
 # sistema_gestao_rh
 
 Arquitetura inicial
-sistema_gesta0_rh/
+```
+sistema-rh/
 ├── src/
 │   ├── main.cpp
 │   ├── Funcionario.cpp
 │   ├── Ponto.cpp
 │   ├── Falta.cpp
-│   ├── Salario.cpp
+│   └── Salario.cpp
 │   └── Ferias.cpp
 ├── include/
 │   ├── Funcionario.h
@@ -18,3 +19,4 @@ sistema_gesta0_rh/
 └── .vscode/
     ├── tasks.json      (compilar com um atalho)
     └── launch.json     (rodar/debugar)
+```
