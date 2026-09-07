@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Rodar Sistema RH",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/sistema-rh",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "preLaunchTask": "Compilar Sistema RH",
+            "MIMode": "gdb"
+        }
+    ]
+}
