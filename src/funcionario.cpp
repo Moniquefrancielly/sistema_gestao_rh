@@ -1,5 +1,6 @@
 #include "../include/Funcionario.h"
 #include <iostream>
+#include <algorithm>
 
 void cadastrarFuncionario(std::vector<Funcionario>& funcionarios) {
     Funcionario novo;
@@ -25,6 +26,21 @@ void cadastrarFuncionario(std::vector<Funcionario>& funcionarios) {
 
     std::cout << "Funcionario cadastrado com sucesso! ID: " << novo.id << "\n";
 }
+    std::vector<Funcionario> filtrarPorDepartamento(const std::vector<Funcionario>& funcionarios, const std::string& departamento) {
+    std::vector<Funcionario> filtrados;
+
+    std::copy_if(
+        funcionarios.begin(),
+        funcionarios.end(),
+        std::back_inserter(filtrados),
+        [departamento](const Funcionario& f) {
+            return f.departamento == departamento;
+        }
+    );
+
+    return filtrados;
+}
+
 
 void listarFuncionarios(const std::vector<Funcionario>& funcionarios) {
     if (funcionarios.empty()) {
