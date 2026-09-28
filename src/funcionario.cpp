@@ -22,6 +22,14 @@ void cadastrarFuncionario(std::vector<Funcionario>& funcionarios) {
     std::cout << "Salario base: ";
     std::cin >> novo.salarioBase;
 
+    std::cout << "Salario base: ";
+    std::cin >> novo.salarioBase;
+
+    while (novo.salarioBase <= 0) {
+        std::cout << "Salario invalido. Digite um valor maior que zero: ";
+        std::cin >> novo.salarioBase;
+    }
+
     funcionarios.push_back(novo);
 
     std::cout << "Funcionario cadastrado com sucesso! ID: " << novo.id << "\n";
